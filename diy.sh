@@ -18,36 +18,36 @@ sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz
 rm -f ./.config*
 touch ./.config
 
-# 编译x64固件:
+# 编译x64固件
 cat >> .config <<EOF
 CONFIG_TARGET_x86=y
 CONFIG_TARGET_x86_64=y
 CONFIG_TARGET_x86_64_Generic=y
 EOF
 
-# 设置固件大小:
+# 设置固件大小
 cat >> .config <<EOF
 CONFIG_TARGET_KERNEL_PARTSIZE=16
 CONFIG_TARGET_ROOTFS_PARTSIZE=160
 EOF
 
-# 固件压缩:
+# 固件压缩
 cat >> .config <<EOF
 CONFIG_TARGET_IMAGES_GZIP=y
 EOF
 
-# 编译UEFI固件:
+# 编译UEFI固件
 cat >> .config <<EOF
 CONFIG_EFI_IMAGES=y
 EOF
 
-# IPv6支持:
+# IPv6支持
 # cat >> .config <<EOF
 # CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
 # CONFIG_PACKAGE_ipv6helper=y
 # EOF
 
-# 多文件系统支持:
+# 多文件系统支持
 # cat >> .config <<EOF
 # CONFIG_PACKAGE_kmod-fs-nfs=y
 # CONFIG_PACKAGE_kmod-fs-nfs-common=y
@@ -57,7 +57,7 @@ EOF
 # CONFIG_PACKAGE_kmod-fs-squashfs=y
 # EOF
 
-# USB3.0支持:
+# USB3.0支持
 # cat >> .config <<EOF
 # CONFIG_PACKAGE_kmod-usb-ohci=y
 # CONFIG_PACKAGE_kmod-usb-ohci-pci=y
@@ -66,7 +66,7 @@ EOF
 # CONFIG_PACKAGE_kmod-usb3=y
 # EOF
 
-# 第三方插件选择:
+# 第三方插件选择
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
 CONFIG_PACKAGE_luci-app-ssr-plus=y
@@ -150,7 +150,7 @@ CONFIG_PACKAGE_luci-app-smartdns=y #smartdnsDNS服务
 # CONFIG_PACKAGE_samba36-server is not set #网络共享
 EOF
 
-# LuCI主题:
+# LuCI主题
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-theme-argon=y
 # CONFIG_PACKAGE_luci-theme-atmaterial is not set
@@ -158,7 +158,7 @@ CONFIG_PACKAGE_luci-theme-argon=y
 # CONFIG_PACKAGE_luci-theme-netgear is not set
 EOF
 
-# 其他软件包:
+# 其他软件包
 cat >> .config <<EOF
 CONFIG_PACKAGE_curl=y
 CONFIG_PACKAGE_htop=y
@@ -170,7 +170,7 @@ CONFIG_PACKAGE_vim-fuller=y
 CONFIG_HAS_FPU=y
 EOF
 
-# 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
+# 取消编译VMware镜像以及镜像填充
 # cat >> .config <<EOF
 # CONFIG_TARGET_IMAGES_PAD is not set
 # CONFIG_VMDK_IMAGES is not set
