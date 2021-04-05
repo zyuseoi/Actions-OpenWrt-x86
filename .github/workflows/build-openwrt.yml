@@ -1,4 +1,4 @@
-name: OpenWrt-x86-64-DIY
+name: OpenWrt-DIY
 
 on:
 # 定时触发(每周五15点)
@@ -107,14 +107,13 @@ jobs:
       id: organize
       if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       run: |
-        cd openwrt/bin/targets/*/*
-        rm -rf packages
-        echo "FIRMWARE=$PWD" >> $GITHUB_ENV
-        echo "::set-output name=status::success"
+          rm -rf ./artifact/
+          mkdir -p ./artifact/
+          find openwrt/bin/targets/ -name "*combined*img*" | xargs -i mv -f {} ./artifact/
+          find openwrt/bin/targets/ -name "*uefi*img*" | xargs -i mv -f {} ./artifact/
 
     - name: 上载固件目录
       uses: actions/upload-artifact@main
-      if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-        path: ${{ env.FIRMWARE }}
+        name: OpenWrt-Actions-DIY
+        path: ./artifact/
