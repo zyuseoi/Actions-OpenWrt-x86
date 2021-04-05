@@ -7,7 +7,8 @@
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
 # 添加软件包
-git clone https://github.com/kenzok8/openwrt-packages.git
+cd openwrt
+git clone https://github.com/liuran001/openwrt-packages
 
 # 自定义后台地址
 sed -i 's#192.168.1.1#192.168.2.101#g' package/base-files/files/bin/config_generate
@@ -68,8 +69,7 @@ EOF
 
 # 第三方插件选择
 cat >> .config <<EOF
-CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
-CONFIG_PACKAGE_luci-app-ssr-plus=y
+CONFIG_PACKAGE_luci-app-ssr-plus=y # ShadowsocksR插件
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
@@ -81,6 +81,13 @@ CONFIG_PACKAGE_luci-app-arpbind=y #ARP绑定
 CONFIG_PACKAGE_luci-app-ramfree=y #清理内存
 CONFIG_PACKAGE_luci-app-firewall=y #添加防火墙
 CONFIG_PACKAGE_luci-app-smartdns=y #smartdnsDNS服务
+CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
+CONFIG_PACKAGE_luci-app-ssr-plus=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
+# CONFIG_PACKAGE_luci-app-UUGameAcc is not set #UU游戏加速器
+# CONFIG_PACKAGE_luci-app-jd-dailybonus is not set #京东签到助手
 # CONFIG_PACKAGE_luci-app-oaf is not set #应用过滤
 # CONFIG_PACKAGE_luci-app-serverchan is not set #微信推送
 # CONFIG_PACKAGE_luci-app-eqos is not set #IP限速
