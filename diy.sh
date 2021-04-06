@@ -3,12 +3,10 @@
 # 取消对提要源的注释
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
-# 添加源
-#sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
-
-# 添加软件包
 cd openwrt
-git clone https://github.com/liuran001/openwrt-packages
+
+# 添加源
+sed -i '$a src-git liuran001_packages https://github.com/liuran001/openwrt-packages' feeds.conf.default
 
 # 自定义后台地址
 sed -i 's#192.168.1.1#192.168.2.101#g' package/base-files/files/bin/config_generate
