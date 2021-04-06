@@ -4,15 +4,15 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # 更新安装源
-cd openwrt && ./scripts/feeds update -a
-cd openwrt && ./scripts/feeds install -a
+./scripts/feeds update -a
+./scripts/feeds install -a
 
 # 添加源
 sed -i '$a src-git liuran001_packages https://github.com/liuran001/openwrt-packages' feeds.conf.default
 
 # 更新安装源
-cd openwrt && ./scripts/feeds update -a
-cd openwrt && ./scripts/feeds install -a
+./scripts/feeds update -a
+./scripts/feeds install -a
 
 # 自定义后台地址
 sed -i 's#192.168.1.1#192.168.2.101#g' package/base-files/files/bin/config_generate
