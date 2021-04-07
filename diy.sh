@@ -85,6 +85,7 @@ CONFIG_PACKAGE_luci-app-arpbind=y #ARP绑定
 CONFIG_PACKAGE_luci-app-ramfree=y #清理内存
 CONFIG_PACKAGE_luci-app-firewall=y #添加防火墙
 CONFIG_PACKAGE_luci-app-smartdns=y #smartdnsDNS服务
+CONFIG_PACKAGE_luci-app-flowoffload=y #Turbo ACC 网络加速
 CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
 CONFIG_PACKAGE_luci-app-ssr-plus=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
@@ -133,7 +134,6 @@ CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
 # CONFIG_PACKAGE_luci-app-accesscontrol is not set #上网时间控制
 # CONFIG_PACKAGE_luci-app-wol is not set #网络唤醒
 # CONFIG_PACKAGE_luci-app-sqm is not set #SQM智能队列管理
-# CONFIG_PACKAGE_luci-app-flowoffload is not set #Turbo ACC 网络加速
 # CONFIG_PACKAGE_luci-app-softethervpn is not set #SoftEtherVPN服务器
 # CONFIG_PACKAGE_luci-app-frpc is not set #Frp内网穿透
 # CONFIG_PACKAGE_luci-app-nlbwmon is not set #宽带流量监控
