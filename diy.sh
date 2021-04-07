@@ -90,7 +90,8 @@ CONFIG_PACKAGE_luci-app-ssr-plus=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
-# CONFIG_PACKAGE_luci-app-UUGameAcc is not set #UU游戏加速器
+# CONFIG_PACKAGE_luci-app-uugamebooster is not set #UU游戏加速器
+# CONFIG_PACKAGE_luci-app-UUGameAcc is not set #UU游戏Acc
 # CONFIG_PACKAGE_luci-app-jd-dailybonus is not set #京东签到助手
 # CONFIG_PACKAGE_luci-app-oaf is not set #应用过滤
 # CONFIG_PACKAGE_luci-app-serverchan is not set #微信推送
