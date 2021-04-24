@@ -87,7 +87,7 @@ CONFIG_PACKAGE_luci-app-firewall=y #添加防火墙
 CONFIG_PACKAGE_firewall=y
 CONFIG_PACKAGE_luci-app-smartdns=y #smartdnsDNS服务
 CONFIG_PACKAGE_luci-app-flowoffload=y #Turbo ACC 网络加速
-CONFIG_PACKAGE_luci-app-openclash=y #OpenClash
+# CONFIG_PACKAGE_luci-app-openclash is not set #OpenClash
 # CONFIG_PACKAGE_luci-app-uugamebooster is not set #UU游戏加速器
 # CONFIG_PACKAGE_luci-app-UUGameAcc is not set #UU游戏Acc
 # CONFIG_PACKAGE_luci-app-jd-dailybonus is not set #京东签到助手
