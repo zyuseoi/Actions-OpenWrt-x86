@@ -77,7 +77,6 @@ CONFIG_PACKAGE_luci-app-ssr-plus=y # ShadowsocksR插件
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
-CONFIG_PACKAGE_luci-app-adbyby-plus=y #adbyby去广告
 CONFIG_PACKAGE_luci-app-autoreboot=y #定时重启
 CONFIG_PACKAGE_luci-app-upnp=y #通用即插即用UPnP(端口自动转发)
 CONFIG_PACKAGE_luci-app-ddns=y #DDNS服务
@@ -86,6 +85,7 @@ CONFIG_PACKAGE_luci-app-ramfree=y #清理内存
 CONFIG_PACKAGE_luci-app-firewall=y #添加防火墙
 CONFIG_PACKAGE_firewall=y
 CONFIG_PACKAGE_luci-app-flowoffload=y #Turbo ACC 网络加速
+# CONFIG_PACKAGE_luci-app-adbyby-plus is not set #adbyby去广告
 # CONFIG_PACKAGE_luci-app-openclash is not set #OpenClash
 # CONFIG_PACKAGE_luci-app-smartdns=y #smartdnsDNS服务
 # CONFIG_PACKAGE_luci-app-uugamebooster is not set #UU游戏加速器
