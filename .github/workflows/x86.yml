@@ -1,8 +1,6 @@
 name: OpenWrt-x86
 
 on:
-  watch:
-    types: [started]
   repository_dispatch:
   workflow_dispatch:
     inputs:
