@@ -30,7 +30,6 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     runs-on: ubuntu-18.04
 
-
     steps:
     - name: 校验
       uses: actions/checkout@main
@@ -116,7 +115,6 @@ jobs:
 
     - name: 组织文件
       id: organize
-      if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       run: |
           rm -rf ./artifact/
           mkdir -p ./artifact/
@@ -124,7 +122,6 @@ jobs:
 
     - name: 上载固件目录
       uses: actions/upload-artifact@main
-      if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
         name: OpenWrt-DIY
         path: ./artifact/
