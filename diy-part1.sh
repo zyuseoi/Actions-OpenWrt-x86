@@ -14,5 +14,4 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # 添加源
-echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-
+git clone https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
