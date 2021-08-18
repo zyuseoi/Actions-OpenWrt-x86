@@ -117,7 +117,7 @@ jobs:
     - name: 上载固件目录
       uses: actions/upload-artifact@main
       with:
-        name: OpenWrt-DIY
+        name: OpenWrt-x86
         path: ./artifact/
 
 
